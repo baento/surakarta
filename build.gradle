@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+group 'fr.uphf.etu'
+version '1.0'
+
+sourceCompatibility = 13
+mainClassName = "fr.uphf.etu.Surakarta"
+
+javafx {
+    version = "13"
+    modules = [ 'javafx.controls' ]
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+
+    implementation group: 'com.google.guava', name: 'guava', version: '28.1-jre'
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.0'
+    runtime group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.0'
+}
+
